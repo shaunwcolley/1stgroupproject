@@ -9,14 +9,28 @@
     <div id="container">
       <div>
         <div>
+          <h2>Workout Health App</h2>
+          <p>Register Below</p>
+        </div>
+        <div>
         <form id="registerForm">
+          <div>
+            <input id="emailTextBox" type="email" placeholder="Email" required/>
+            <input id="passwordTextBox" type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain one number, one uppercase letter, one lowercase, and 8 or more characters." required/>
+            <small>*Must conatian at least 8 characters and include an uppercase letter, lowercase letter, and a number.</small>
+          </div>
           <div>
             <input id="firstNameTextBox" type="text" placeholder="First Name" required/>
             <input id="lastNameTextBox" type="text" placeholder="Last Name" required/>
           </div>
           <div>
-            <input id="emailTextBox" type="email" placeholder="Email" required/>
-            <input id="passwordTextBox" type="password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain one number, one uppercase letter, one lowercase, and 8 or more characters." required/>
+            <span>City: </span><input id="cityTextBox" type="text" placeholder="Houston" required/>
+            <span>State: </span><input id="stateTextBox" type="text" placeholder="TX" required/>
+          </div>
+          <div>
+            <span>Weight: </span><input id="weightTextBox" type="text" placeholder="185"/><span>lbs.</span>
+            <span>Height: </span><input id="feetTextBox" type="text" placeholder="5"/><span>'</span>
+            <input id="inchesTextBox" type="text" placeholder="11"/><span>"</span>
           </div>
           <div>
             <button id="registerBtn">Register</button>
