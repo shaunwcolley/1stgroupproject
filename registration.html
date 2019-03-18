@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="registration.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>DC Workout App Registration Page</title>
+  </head>
+  <body>
+    <div id="container">
+      <div>
+        <div>
+          <h2>Workout Health App</h2>
+          <p>Register Below</p>
+        </div>
+        <div>
+        <form id="registerForm">
+          <div>
+            <input id="emailTextBox" type="email" placeholder="Email" required/>
+            <input id="passwordTextBox" type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain one number, one uppercase letter, one lowercase, and 8 or more characters." required/>
+            <small>*Must conatian at least 8 characters and include an uppercase letter, lowercase letter, and a number.</small>
+          </div>
+          <div>
+            <input id="firstNameTextBox" type="text" placeholder="First Name" required/>
+            <input id="lastNameTextBox" type="text" placeholder="Last Name" required/>
+          </div>
+          <div>
+            <span>City: </span><input id="cityTextBox" type="text" placeholder="Houston" required/>
+            <span>State: </span><input id="stateTextBox" type="text" placeholder="TX" required/>
+          </div>
+          <div>
+            <span>Weight: </span><input id="weightTextBox" type="text" placeholder="185"/><span>lbs.</span>
+            <span>Height: </span><input id="feetTextBox" type="text" placeholder="5"/><span>'</span>
+            <input id="inchesTextBox" type="text" placeholder="11"/><span>"</span>
+          </div>
+          <div>
+            <button id="registerBtn">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD0Y4SRRnYJpCh-Rvj7sOY7EBI7BKCDxiw",
+      authDomain: "dcworkoutapp.firebaseapp.com",
+      databaseURL: "https://dcworkoutapp.firebaseio.com",
+      projectId: "dcworkoutapp",
+      storageBucket: "dcworkoutapp.appspot.com",
+      messagingSenderId: "860830712282"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script type="text/javascript" src="registration.js"></script>
+</html>
