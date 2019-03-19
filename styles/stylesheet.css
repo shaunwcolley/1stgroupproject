@@ -1,7 +1,9 @@
 H1 {
     text-align: center;
 }
-
+ul {
+  list-style: none;
+}
 #pageHeader {
   display: flex;
 }

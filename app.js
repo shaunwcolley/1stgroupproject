@@ -6,43 +6,65 @@ let btnWorkout1 = document.getElementById("btnWorkout1")
 let dropDownCustom = document.getElementById("dropDownCustom")
 let nextList = document.getElementById("nextList")
 //Test arrays
-let testArray = ["Push","Pull","Leg"]
-let exerciseArray = ["Bench","Shoulder press","Skull Crusher"]
+
+let exercises = []
 //Hook up Firebase
 let database = firebase.database()
 let workouts = []
-let workoutsRef = database.ref("MyWorkouts")
+let exercisesRef = database.ref("Exercises")
 
-// adding workout name 
+// adding workout name
 /*
-workoutsRef.child("6Zm7acP6ZGQi7LUlZRQvXen4LAw2").push({
+exercisesRef.child("6Zm7acP6ZGQi7LUlZRQvXen4LAw2").push({
     name: "Monday"
 }) */
-
-workoutsRef.child("6Zm7acP6ZGQi7LUlZRQvXen4LAw2")
-.on('value',function(snapshot){
-    console.log(snapshot.val())
-
-    let names = [] 
-
-    
-
-    
-    for(key in snapshot.val()) {
-        names.push(snapshot.val()[key])
-    } 
-    
-    //console.log(names)
-
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    let currentUID = firebase.auth().currentUser.uid
+    let userRef = exercisesRef.child(currentUID)
+    let excerciseTypeRef = userRef.child("Exercise Types")
+    let workoutTypeRef = userRef.child("Workout Types")
+    workoutTypeRef
+    .on("child_added", function(snapshot){
+      workouts.push({key: snapshot.key, value: snapshot.val()})
+    })
+    // let exerciseInstanceRef = userRef.child("Exercise Instances")
+    // exerciseInstanceRef.push({
+    //   date: "Unix Timestamp",
+    //   exerciseType: "Incline",
+    //   reps: 5,
+    //   rest: 2,
+    //   sets: 4,
+    //   weight: 145,
+    //   workoutType: "Push"
+    // })
+    // workoutTypeRef.push({
+    //   name: "Push"
+    // })
+    // excerciseTypeRef.push({
+    //   name: "Incline"
+    // })
+  }
+  else {
+    console.log("No user is signed in")
+  }
 })
 
 
 
+// exercisesRef.child()
+// .on('value',function(snapshot){
+//     console.log(snapshot.val())
+//     let exerciseInstances = []
 
+    // for(key in snapshot.val()) {
+    //     names.push(snapshot.val()[key])
+    // }
+// })
 
-function populateDropdown(){
-    for(var i = 0; i < testArray.length; i++) {
-        let workout = testArray[i];
+function populateDropdown(workoutArray, excerciseArray){
+    for(var i = 0; i < workoutArray.length; i++) {
+        let workout = workoutArray[i].value.name;
         let workoutBtn = document.createElement("button")
         workoutBtn.innerHTML = workout
         workoutBtn.setAttribute("class","dropdown-item")
@@ -50,7 +72,7 @@ function populateDropdown(){
         workoutBtn.setAttribute("type","button")
         dropDownCustom.appendChild(workoutBtn)
         workoutBtn.addEventListener('click',function(){
-            console.log("Button is firing")
+            //console.log("Button is firing")
             let liItems = exerciseArray.map(function(exercise) {
                 return `<li>
                         <button class="btnExercise">${exercise}</button>
@@ -61,14 +83,12 @@ function populateDropdown(){
                         </li>`
             })
 
-            
-        
             workoutUL.innerHTML = liItems.join('')
             let btnExercise = document.getElementsByClassName("btnExercise")
 
             for(let i = 0; i < btnExercise.length; i++){
                 btnExercise[i].addEventListener('click',function(){
-                console.log("exercise button is firing")
+                //console.log("exercise button is firing")
                 let newListItems = exerciseArray.map(function(exercise) {
                     return `<li>
                             <span>Last Weight:</span>
@@ -81,4 +101,4 @@ function populateDropdown(){
     }
 }
 
-populateDropdown()
+//populateDropdown()
