@@ -8,6 +8,7 @@ let weightTextBox = document.getElementById("weightTextBox")
 let feetTextBox = document.getElementById("feetTextBox")
 let inchesTextBox = document.getElementById("inchesTextBox")
 
+//line change on github
 let registerBtn = document.getElementById("registerBtn")
 let database = firebase.database()
 let usersRef = database.ref('users')
