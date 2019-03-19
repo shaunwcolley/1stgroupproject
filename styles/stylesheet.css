@@ -2,6 +2,13 @@ H1 {
     text-align: center;
 }
 
+#pageHeader {
+  display: flex;
+}
+#pageHeader button {
+  margin-left: 20%;
+}
+
 .CardPics{
     display:flex;
     flex-direction: column;
@@ -21,6 +28,7 @@ H1 {
     height:184px;
     align-content: center;
 }
+<<<<<<< HEAD
 
 .card-img-overlay {
     position: absolute;
@@ -55,3 +63,5 @@ H1 {
 
 
 
+=======
+>>>>>>> master
