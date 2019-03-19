@@ -15,8 +15,12 @@
 
 
 <body>
-<H1>Digital Crafts WorkOut Dashboard</H1>
-<div class="dropdown">
+  <div id="container">
+    <div id="pageHeader">
+      <H1>Digital Crafts WorkOut Dashboard</H1>
+      <button id="signOutBtn">Sign Out</button>
+    </div>
+    <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Video Tutorials
         </button>
@@ -72,7 +76,7 @@
   <ul id="nextList"></ul>
 
 
-
+</div>
 
 <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
 <script>
@@ -94,5 +98,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </script>
 <script src="dashboard.js"></script>
+<script src="signoutbtn.js"></script>
 </body>
 </html>
