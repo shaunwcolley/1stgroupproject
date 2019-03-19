@@ -5,6 +5,7 @@ let passwordTextBox = document.getElementById("passwordTextBox")
 let cityTextBox = document.getElementById("cityTextBox")
 let stateTextBox = document.getElementById("stateTextBox")
 let weightTextBox = document.getElementById("weightTextBox")
+let ageTextBox = document.getElementById("ageTextBox")
 let feetTextBox = document.getElementById("feetTextBox")
 let inchesTextBox = document.getElementById("inchesTextBox")
 
@@ -23,6 +24,7 @@ registerBtn.addEventListener('click', function(e) {
   let city = cityTextBox.value
   let state = stateTextBox.value
   let weight = weightTextBox.value
+  let age = ageTextBox.value
   let feet = feetTextBox.value
   let inches = inchesTextBox.value
 
@@ -37,6 +39,7 @@ registerBtn.addEventListener('click', function(e) {
         state: state,
       },
       weight: weight,
+      Age : age,
       height: {feet: feet,
       inches: inches}
     })
