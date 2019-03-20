@@ -2,15 +2,17 @@
 let workoutUL = document.getElementById("workoutUL")
 //Custom workout dropdown buttons
 let btnWorkout1 = document.getElementById("btnWorkout1")
-
 let dropDownCustom = document.getElementById("dropDownCustom")
 let nextList = document.getElementById("nextList")
 //Test arrays
 
-let exercises = []
+let exerciseInstanceHistory = document.getElementById("exerciseInstanceHistory")
+
 //Hook up Firebase
 let database = firebase.database()
 let workouts = []
+let exercises = []
+let exerciseInstances = []
 let exercisesRef = database.ref("Exercises")
 
 // adding workout name
@@ -24,6 +26,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     let userRef = exercisesRef.child(currentUID)
     let exerciseTypeRef = userRef.child("Exercise Types")
     let workoutTypeRef = userRef.child("Workout Types")
+    let exerciseInstancesRef = userRef.child("Exercise Instances")
 
     workoutTypeRef
     .on("child_added", function(snapshot){
@@ -32,6 +35,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     exerciseTypeRef.on("child_added", function(snapshot) {
       exercises.push({key: snapshot.key, value: snapshot.val()})
       populateDropdown(workouts, exercises)
+    })
+    exerciseInstancesRef.on("child_added", function(snapshot){
+      exerciseInstances.push({key: snapshot.key, value: snapshot.val()})
     })
 
   }else {
@@ -74,36 +80,45 @@ function populateDropdown(workoutArray, exerciseArray){
 }
 function displayExercise(key) {
   let workoutNames = []
-  let exerciseNames = []
   for(let i = 0; i < exercises.length; i++){
     if(key == exercises[i].key){
       workoutNames.push(exercises[i])
     }
   }
-  let exerciseObjects = Object.values(workoutNames[0].value)
-  for(let i = 0; i < exerciseObjects.length; i++) {
-    exerciseNames.push(exerciseObjects[i].name)
-  }
-
-  let exerciseLIItems = exerciseNames.map(function(name){
-    return `<li>
-            <button class="btnExercise">${name}</button>
+  let exerciseObjects = Object.values(workoutNames[0])[1]
+  let exerciseNames = Object.values(exerciseObjects)
+  let exerciseKeys = Object.keys(exerciseObjects)
+  let exerciseLIItems = []
+  for(let i = 0; i < exerciseKeys.length; i++) {
+    exerciseLIItems.push(`<li>
+            <button onclick="displayStats('${exerciseKeys[i]}'); logExercise()" class="btnExercise">${exerciseNames[i].name}</button>
             <div>
             <ul id="exerciseList">
             </ul>
             </div>
-            </li>`
-  })
+            </li>`)
+  }
   workoutUL.innerHTML = exerciseLIItems.join('')
 }
 
+function displayStats(key){
+  let exerciseInstanceObjects = []
+  for(let i = 0; i < exerciseInstances.length; i++){
+    if(key == exerciseInstances[i].key){
+      exerciseInstanceObjects.push(exerciseInstances[i].value)
+    }
+  }
+  if (exerciseInstanceObjects.length > 0) {
+    let exerciseInstanceDetails = Object.values(exerciseInstanceObjects[0])
+    let exerciseInstanceLIItems = exerciseInstanceDetails.map(function(exerciseDetail){
+      return `<li>${exerciseDetail.date}: weight lifted was ${exerciseDetail.weight} pounds for ${exerciseDetail.sets} sets, ${exerciseDetail.reps} reps each set, with a ${exerciseDetail.rest} minute rest period.</li>`
+    })
+    exerciseInstanceHistory.innerHTML = exerciseInstanceLIItems.join('')
+  }else{
+    console.log("Bench does not have any previous exercises logged ...")
+  }
 
-// exercisesRef.child()
-// .on('value',function(snapshot){
-//     console.log(snapshot.val())
-//     let exerciseInstances = []
-
-    // for(key in snapshot.val()) {
-    //     names.push(snapshot.val()[key])
-    // }
-// })
+}
+function logExercise() {
+  console.log("Exercise being logged...")
+}
