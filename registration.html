@@ -1,19 +1,84 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="registration.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/registration.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>DC Workout App Registration Page</title>
   </head>
   <body>
-    <div id="container">
-      <div>
+    <!-- <div id="container">
+      <div> -->
         <div>
           <h2>Workout Health App</h2>
-          <p>Register Below</p>
+          <p><u>Register Below</u></p>
         </div>
         <div>
-        <form id="registerForm">
+    <form>
+      <div class="form-row">
+      <div class="form-group col-sm-3">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="emailTextBox" placeholder="Email">
+          </div>
+          <div class="form-group col-sm-3">
+          <label for="inputPassword4">Password</label>
+          <input type="password" class="form-control" id="passwordTextBox" placeholder="Password">
+          </div>
+      </div>
+      <div class="form-row">
+      <div class="form-group col-sm-3">
+          <label for="inputEmail4">First Name</label>
+          <input type="text" class="form-control" id="firstNameTextBox" placeholder="FirstName">
+          </div>
+          <div class="form-group col-sm-3">
+          <label for="inputPassword4">Last Name</label>
+          <input type="text" class="form-control" id="lastNameTextBox" placeholder="LastName">
+          </div>
+      </div>
+    <div class="form-row">
+    <div class="form-group col-sm-2">
+        <label for="inputCity">City</label>
+        <input type="text" class="form-control" id="cityTextBox">
+        </div>
+    <div class="form-group col-sm-2">
+        <label for="inputState">State</label>
+        <input type="text" class="form-control" id="stateTextBox">
+        <!-- <select id="stateTextBox" class="form-control">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>  -->
+   </div>
+   </div>
+
+<div class="form-row">
+   <div class="form-group col-sm-1">
+       <label for="inputEmail4">Weight-lbs</label>
+       <input type="text" class="form-control" id="weightTextBox" placeholder="150">
+  </div>
+  <div class="form-group col-sm-1">
+      <label for="inputEmail4">Age</label>
+      <input type="text" class="form-control" id="ageTextBox" placeholder="18">
+ </div>
+</div>
+  <div>
+    <span>Height</span>
+  </div>
+  <div class="form-row">
+   <div class="form-group col-sm-1">
+   <label for="inputPassword4">Feet</label>
+   <input type="text" class="form-control" id="feetTextBox" placeholder="5">
+  </div>
+  <div class="form-group col-sm-1">
+  <label for="inputPassword4">Inches</label>
+  <input type="text" class="form-control" id="inchesTextBox" placeholder="11">
+  </div>
+  </div>
+
+<button type="submit" id="registerBtn"class="btn btn-primary">Register</button>
+              </form>
+        <!-- <form id="registerForm">
           <div>
             <input id="emailTextBox" type="email" placeholder="Email" required/>
             <input id="passwordTextBox" type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain one number, one uppercase letter, one lowercase, and 8 or more characters." required/>
@@ -35,9 +100,13 @@
           <div>
             <button id="registerBtn">Register</button>
           </div>
-        </form>
-      </div>
-    </div>
+        </form> -->
+
+
+
+
+      <!-- </div>
+    </div> -->
   </body>
   <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
   <script>
