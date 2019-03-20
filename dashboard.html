@@ -17,22 +17,33 @@
 
 <body>
   <div id="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+          <a class="navbar-brand" href="#">
+              <img src="background_Picture.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+              DCraft-Workout
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                  <a class="nav-link" href="file:///Users/willroberts/Documents/DigitalCrafts/Projects/Week_6/team_workout/dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="file:///Users/willroberts/Documents/DigitalCrafts/Projects/Week_6/team_workout/login.html">Sign Out</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href='#'>Profile</a>
+                </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href='#'>Stats</a>
+              </li>
+      </nav>
     <div id="pageHeader">
       <H1>Digital Crafts WorkOut Dashboard</H1>
       <button id="signOutBtn">Sign Out</button>
     </div>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Video Tutorials
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="https://www.youtube.com/watch?v=x5t9PZ5CsxY&feature=youtu.be">Chest</a>
-          <a class="dropdown-item" href="https://www.youtube.com/watch?v=IUKYRC7GcEo">Arms</a>
-          <a class="dropdown-item" href="https://www.youtube.com/watch?v=tG9XyhMHmZg">Core</a>
-          <a class="dropdown-item" href="https://www.youtube.com/watch?v=Uo5RuwFtjo4">Legs</a>
-          <a class="dropdown-item" href="https://www.youtube.com/watch?v=5JmWguyvu7Y">Full Body</a>
-    
-        </div>
         <div id="youtubeFrame"></div>
         <div class="CardPics" id="exercisePics">
           <div id = 'chestdiv' class="card bg-dark text-white">
@@ -89,7 +100,7 @@
                     </div>
                     
 
-                    <div id="displayWorkoutLItems"></div>
+                   <div id="displayWorkoutLItems"></div>
       </div>
       <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

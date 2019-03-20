@@ -1,13 +1,10 @@
-H1 {
-    text-align: center;
-}
 
 #pageHeader {
   display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
 }
-#pageHeader button {
-  margin-left: 20%;
-}
+
 
 .CardPics{
     display:flex;
@@ -56,12 +53,13 @@ H1 {
 
 #displayWorkoutLItems {
     list-style: none;
+    text-align: center;
+    border:solid 10px blue;
+    margin: auto;
+    border-radius: 11em;
+    width: 20em;
 }
 
 #youtubeFrame {
     text-align: center;
 }
-
-
-
-
