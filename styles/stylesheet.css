@@ -28,7 +28,6 @@ H1 {
     height:184px;
     align-content: center;
 }
-<<<<<<< HEAD
 
 .card-img-overlay {
     position: absolute;
@@ -59,9 +58,10 @@ H1 {
     list-style: none;
 }
 
+#youtubeFrame {
+    text-align: center;
+}
 
 
 
 
-=======
->>>>>>> master

@@ -31,9 +31,10 @@
           <a class="dropdown-item" href="https://www.youtube.com/watch?v=tG9XyhMHmZg">Core</a>
           <a class="dropdown-item" href="https://www.youtube.com/watch?v=Uo5RuwFtjo4">Legs</a>
           <a class="dropdown-item" href="https://www.youtube.com/watch?v=5JmWguyvu7Y">Full Body</a>
+    
         </div>
-
-        <div class="CardPics">
+        <div id="youtubeFrame"></div>
+        <div class="CardPics" id="exercisePics">
           <div id = 'chestdiv' class="card bg-dark text-white">
                 <img src="FullBodyWorkOut.jpeg" class="card-img" alt="...">
                 <div class="card-img-overlay">
@@ -43,7 +44,7 @@
                 <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('chest', 'level1')">Beginner</button>
                 <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('chest', 'level2')">Mid Level</button>
                 <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('chest', 'level3')">Advanced</button>
-                <button class="w3-button w3-border w3-tiny">Tutorial</button>
+                <button class="w3-button w3-border w3-tiny" onclick="playtutorial('chest')">Tutorial</button>
               </div>
               </div>
 
@@ -56,7 +57,7 @@
                     <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('legs', 'level1')">Beginner</button>
                     <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('legs', 'level2')">Mid Level</button>
                     <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('legs', 'level3')">Advanced</button>
-                    <button class="w3-button w3-border w3-tiny">Tutorial</button>
+                    <button class="w3-button w3-border w3-tiny" onclick="playtutorial('leg')">Tutorial</button>
                   </div>
                   </div>
 
@@ -69,7 +70,7 @@
                         <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('arm', 'level1')">Beginner</button>
                         <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('arm', 'level2')">Mid Level</button>
                         <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('arm', 'level3')">Advanced</button>
-                        <button class="w3-button w3-border w3-tiny">Tutorial</button>
+                        <button class="w3-button w3-border w3-tiny" onclick="playtutorial('arm')">Tutorial</button>
                       </div>
                       </div>
 
@@ -82,10 +83,11 @@
                             <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('full Body', 'level1')">Beginner</button>
                             <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('full Body', 'level2')">Mid Level</button>
                             <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('full Body', 'level3')">Advanced</button>
-                            <button class="w3-button w3-border w3-tiny">Tutorial</button>
+                            <button class="w3-button w3-border w3-tiny" onclick="playtutorial('fullbody')">Tutorial</button>
                           </div>
                           </div>
                     </div>
+                    
 
                     <div id="displayWorkoutLItems"></div>
       </div>
