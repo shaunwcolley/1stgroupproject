@@ -111,11 +111,12 @@ function displayStats(key){
   if (exerciseInstanceObjects.length > 0) {
     let exerciseInstanceDetails = Object.values(exerciseInstanceObjects[0])
     let exerciseInstanceLIItems = exerciseInstanceDetails.map(function(exerciseDetail){
-      return `<li>${exerciseDetail.date}: weight lifted was ${exerciseDetail.weight} pounds for ${exerciseDetail.sets} sets, ${exerciseDetail.reps} reps each set, with a ${exerciseDetail.rest} minute rest period.</li>`
+      return `<li>On ${exerciseDetail.date.toDateString()} at ${exerciseDetail.date.toLocaleTimeString()}: weight lifted was ${exerciseDetail.weight} pounds for ${exerciseDetail.sets} sets, ${exerciseDetail.reps} reps each set, with a ${exerciseDetail.rest} minute rest period.</li>`
     })
     exerciseInstanceHistory.innerHTML = exerciseInstanceLIItems.join('')
   }else{
     console.log("Bench does not have any previous exercises logged ...")
+    exerciseInstanceHistory.innerHTML = ``
   }
 
 }
