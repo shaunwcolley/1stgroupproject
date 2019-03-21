@@ -16,7 +16,34 @@
 
 
 <body>
+<<<<<<< HEAD
   <div id="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+          <a class="navbar-brand" href="#">
+              <img src="background_Picture.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+              DCraft-Workout
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                  <a class="nav-link" href="file:///Users/willroberts/Documents/DigitalCrafts/Projects/Week_6/team_workout/dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="file:///Users/willroberts/Documents/DigitalCrafts/Projects/Week_6/team_workout/login.html">Sign Out</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href='#'>Profile</a>
+                </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href='#'>Stats</a>
+              </li>
+      </nav>
+=======
+<div id="container">
+>>>>>>> master
     <div id="pageHeader">
       <H1>Digital Crafts WorkOut Dashboard</H1>
       <button id="signOutBtn">Sign Out</button>
@@ -24,7 +51,22 @@
     <input type="submit" value="Edit Profile"/>
 </form>
     </div>
-    <div class="dropdown">
+<<<<<<< HEAD
+        <div id="youtubeFrame"></div>
+        <div class="CardPics" id="exercisePics">
+=======
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Your Workouts
+    </button>
+    <div id="dropDownCustom" class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    </div>
+  </div>
+
+<ul id="workoutUL"></ul>
+<ul id="exerciseInstanceHistory"></ul>
+<ul id="nextList"></ul>
+<div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Video Tutorials
         </button>
@@ -37,6 +79,7 @@
         </div>
 
         <div class="CardPics">
+>>>>>>> master
           <div id = 'chestdiv' class="card bg-dark text-white">
                 <img src="FullBodyWorkOut.jpeg" class="card-img" alt="...">
                 <div class="card-img-overlay">
@@ -46,7 +89,7 @@
                 <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('chest', 'level1')">Beginner</button>
                 <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('chest', 'level2')">Mid Level</button>
                 <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('chest', 'level3')">Advanced</button>
-                <button class="w3-button w3-border w3-tiny">Tutorial</button>
+                <button class="w3-button w3-border w3-tiny" onclick="playtutorial('chest')">Tutorial</button>
               </div>
               </div>
 
@@ -59,7 +102,7 @@
                     <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('legs', 'level1')">Beginner</button>
                     <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('legs', 'level2')">Mid Level</button>
                     <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('legs', 'level3')">Advanced</button>
-                    <button class="w3-button w3-border w3-tiny">Tutorial</button>
+                    <button class="w3-button w3-border w3-tiny" onclick="playtutorial('leg')">Tutorial</button>
                   </div>
                   </div>
 
@@ -72,7 +115,7 @@
                         <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('arm', 'level1')">Beginner</button>
                         <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('arm', 'level2')">Mid Level</button>
                         <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('arm', 'level3')">Advanced</button>
-                        <button class="w3-button w3-border w3-tiny">Tutorial</button>
+                        <button class="w3-button w3-border w3-tiny" onclick="playtutorial('arm')">Tutorial</button>
                       </div>
                       </div>
 
@@ -85,50 +128,42 @@
                             <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('full Body', 'level1')">Beginner</button>
                             <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('full Body', 'level2')">Mid Level</button>
                             <button class="w3-button w3-border w3-tiny" onclick="displayworkouts('full Body', 'level3')">Advanced</button>
-                            <button class="w3-button w3-border w3-tiny">Tutorial</button>
+                            <button class="w3-button w3-border w3-tiny" onclick="playtutorial('fullbody')">Tutorial</button>
                           </div>
                           </div>
                     </div>
+                    
 
-                    <div id="displayWorkoutLItems"></div>
+                   <div id="displayWorkoutLItems"></div>
       </div>
-      <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Your Workouts
-          </button>
-          <div id="dropDownCustom" class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          </div>
-        </div>
 
-  <ul id="workoutUL"></ul>
-
-  <ul id="nextList"></ul>
 
 
 </div>
 
-<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-   apiKey: "AIzaSyD0Y4SRRnYJpCh-Rvj7sOY7EBI7BKCDxiw",
-   authDomain: "dcworkoutapp.firebaseapp.com",
-   databaseURL: "https://dcworkoutapp.firebaseio.com",
-   projectId: "dcworkoutapp",
-   storageBucket: "dcworkoutapp.appspot.com",
-   messagingSenderId: "860830712282"
- };
- firebase.initializeApp(config);
- </script>
- <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</script>
-<script src="workout.js"></script>
-<script src="dashboard.js"></script>
-<script src="signoutbtn.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyD0Y4SRRnYJpCh-Rvj7sOY7EBI7BKCDxiw",
+    authDomain: "dcworkoutapp.firebaseapp.com",
+    databaseURL: "https://dcworkoutapp.firebaseio.com",
+    projectId: "dcworkoutapp",
+    storageBucket: "dcworkoutapp.appspot.com",
+    messagingSenderId: "860830712282"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </script>
+  <script src="app.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="signoutbtn.js"></script>
+  
 </body>
 
 </html>
