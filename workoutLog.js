@@ -71,7 +71,7 @@ function displayExercise(key) {
       workoutNames.push(exercises[i])
     }
   }
-  
+
   if (workoutNames.length > 0) {
     let exerciseObjects = Object.values(workoutNames[0])[1]
     let exerciseNames = Object.values(exerciseObjects)
@@ -87,10 +87,16 @@ function displayExercise(key) {
               </li>`)
     }
     workoutUL.innerHTML = exerciseLIItems.join('')
+    let createNewExerciseBtn = `<button onclick="showNewExerciseForm()">Add New Exercise</button>`
+    workoutUL.insertAdjacentHTML('beforeend', createNewExerciseBtn)
   }else{
+    workoutUL.innerHTML = ``
+    let createNewExerciseBtn = `<button onclick="showNewExerciseForm()">Add New Exercise/button>`
+    workoutUL.insertAdjacentHTML('beforeend', createNewExerciseBtn)
     console.log("No exercises have been created for this workout ...")
   }
 }
+
 
 function displayStats(key){
   let exerciseInstanceObjects = []
@@ -171,20 +177,19 @@ function showNewWorkoutForm(){
       newWorkoutForm.hidden = false;
     } else if (newWorkoutForm.hidden == false){
         newWorkoutForm.hidden = true;}
-    }       
-    
+    }
+
     function showNewExerciseBtn(key){
     if (btnAddNewExercise.hidden == true) {
       btnAddNewExercise.hidden = false;
       newExerciseKey = key
     } else if (btnAddNewExercise.hidden == false){
       btnAddNewExercise.hidden = true;}
-    } 
-    
+    }
+
     function showNewExerciseForm(){
       if (newExerciseForm.hidden == true) {
         newExerciseForm.hidden = false;
       } else if (newExerciseForm.hidden == false){
         newExerciseForm.hidden = true;}
-    } 
-    
+    }
