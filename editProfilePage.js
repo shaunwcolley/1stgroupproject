@@ -76,28 +76,33 @@ firebase.auth().onAuthStateChanged((user)=>{
       </form>`
       a.innerHTML = profilePageBodyChange
       updateBtn.addEventListener('click', function(){
-        let firstNameTextBox = document.getElementById("firstNameTextBox")
-        let lastNameTextBox = document.getElementById("lastNameTextBox")
-        let cityTextBox = document.getElementById("cityTextBox")
-        let stateTextBox = document.getElementById("stateTextBox")
-        let weightTextBox = document.getElementById("weightTextBox")
-        let ageTextBox = document.getElementById("ageTextBox")
-        let feetTextBox = document.getElementById("feetTextBox")
-        let inchesTextBox = document.getElementById("inchesTextBox")
+        let firstNameTextBox = document.getElementById("firstNameTextBox").value
+        let lastNameTextBox = document.getElementById("lastNameTextBox").value
+        let cityTextBox = document.getElementById("cityTextBox").value
+        let stateTextBox = document.getElementById("stateTextBox").value
+        let weightTextBox = document.getElementById("weightTextBox").value
+        let ageTextBox = document.getElementById("ageTextBox").value
+        let feetTextBox = document.getElementById("feetTextBox").value
+        let inchesTextBox = document.getElementById("inchesTextBox").value
 
-
-        /*Should be user node*/.set({
-          firstName: firstName,
-          lastName: lastName,
+        let weight = parseInt(weightTextBox,10)
+        let age = parseInt(ageTextBox,10)
+        let feet = parseInt(feetTextBox,10)
+        let inches = parseInt(inchesTextBox,10)
+        let userRef = firebase.database().ref(`users/${user.uid}`)
+          userRef.update({
+          firstName: firstNameTextBox,
+          lastName: lastNameTextBox,
           location: {
-            city: city,
-            state: state,
+            city: cityTextBox,
+            state: stateTextBox,
           },
           weight: weight,
-          Age : age,
+          age : age,
           height: {feet: feet,
           inches: inches}
         })
+        a.innerHTML = profilePageBody
       })
       })
   }
