@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 
+=======
+H1 {
+    text-align: center;
+}
+ul {
+  list-style: none;
+}
+>>>>>>> master
 #pageHeader {
   display: flex;
   justify-content: center;
