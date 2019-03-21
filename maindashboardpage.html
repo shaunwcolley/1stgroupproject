@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="maindashboardpage.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!--<title>DC Workout App Registration Page</title>-->
+  </head>
+  <body id="bodyColor">
+    <div class='divListStyle'>
+    <div id="heading">
+    </div>
+    <p id="textColor">Here is all options you have avialble to begin your awesome day!!</p>
+
+    <div class="list-group">
+      <div class='divSeperator divWidth'>
+        <a href="dashboard.html" class="list-group-item list-group-item-action list-group-item-primary">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">go to the tutorial</h5>
+          </div>
+          <p class="mb-1">Do you guys want to learn about the types of excercise we offer and how to do that excercise. This is the
+          link to that page</p>
+          <!--<small>Donec id elit non mi porta.</small>-->
+        </a>
+    </div>
+    <div class='divSeperator divWidth'>
+      <a href="dashboard.html" class="list-group-item list-group-item-action list-group-item-success">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">work on your custom workout</h5>
+        </div>
+        <p class="mb-1">create and choose your own workout for today</p>
+          <!--<small class="text-muted">Donec id elit non mi porta.</small>-->
+      </a>
+    </div>
+    <div class='divSeperator divWidth'>
+      <a href="dashboard.html" class="list-group-item list-group-item-action list-group-item-warning"">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">view your detailed history</h5>
+          <!--<small class="text-muted">3 days ago</small>-->
+        </div>
+        <p class="mb-1">you can view your detailed history of your workout uptil today.</p>
+        <!--<small class="text-muted">Donec id elit non mi porta.</small>-->
+      </a>
+    </div>
+  </div>
+  </div>
+
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD0Y4SRRnYJpCh-Rvj7sOY7EBI7BKCDxiw",
+    authDomain: "dcworkoutapp.firebaseapp.com",
+    databaseURL: "https://dcworkoutapp.firebaseio.com",
+    projectId: "dcworkoutapp",
+    storageBucket: "dcworkoutapp.appspot.com",
+    messagingSenderId: "860830712282"
+  };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript" src="maindashboardpage.js"></script>
+</html>
