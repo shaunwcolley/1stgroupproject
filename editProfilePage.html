@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/registration.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!--<title>DC Workout App Registration Page</title>-->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <a class="navbar-brand" href="#">
+            <img src="background_Picture.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+            DCraft-Workout
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="login.html">Sign Out</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href='#'>Profile</a>
+              </li>
+            <li class="nav-item active">
+                <a class="nav-link" href='#'>Stats</a>
+            </li>
+    </nav>
+        <div>
+          <!--<h2>Workout Health App</h2>-->
+          <p><u>Account Info</u></p>
+          <button type="submit" id="editBtn"class="btn btn-primary">Edit</button>
+          <button type="submit" id="updateBtn"class="btn btn-primary">Update</button>
+        </div>
+        <div id="a">
+        </div>
+
+
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD0Y4SRRnYJpCh-Rvj7sOY7EBI7BKCDxiw",
+      authDomain: "dcworkoutapp.firebaseapp.com",
+      databaseURL: "https://dcworkoutapp.firebaseio.com",
+      projectId: "dcworkoutapp",
+      storageBucket: "dcworkoutapp.appspot.com",
+      messagingSenderId: "860830712282"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script type="text/javascript" src="editProfilePage.js"></script>
+</html>
