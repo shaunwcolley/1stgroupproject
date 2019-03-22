@@ -28,13 +28,14 @@ registerBtn.addEventListener('click', function(e) {
   let feet = feetTextBox.value
   let inches = inchesTextBox.value
 
-  weightInt = parseInt(weightTextBox,10)
-  ageInt = parseInt(age,10)
-  feetInt = parseInt(feet,10)
-  inchesInt = parseInt(inches,10)
+  let weightInt = parseInt(weight,10)
+  let ageInt = parseInt(age,10)
+  let feetInt = parseInt(feet,10)
+  let inchesInt = parseInt(inches,10)
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function(response){
+    console.log('uid', response.user.uid)
     let userRef = usersRef.child(response.user.uid)
     userRef.set({
       firstName: firstName,
