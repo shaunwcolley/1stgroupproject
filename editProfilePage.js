@@ -21,6 +21,7 @@ firebase.auth().onAuthStateChanged(function(user){
         <p>Age: ${age}</p>
         <p>city:${city}</p>
         <p>state: ${state}</p>
+        <p>weight:${weight}</p>
         <p>Height Feet: ${heightFeet}</p>
         <p>HeightInches :${heightInches}</p></div>`
 

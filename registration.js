@@ -28,6 +28,11 @@ registerBtn.addEventListener('click', function(e) {
   let feet = feetTextBox.value
   let inches = inchesTextBox.value
 
+  weightInt = parseInt(weightTextBox,10)
+  ageInt = parseInt(age,10)
+  feetInt = parseInt(feet,10)
+  inchesInt = parseInt(inches,10)
+
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function(response){
     let userRef = usersRef.child(response.user.uid)
@@ -38,10 +43,10 @@ registerBtn.addEventListener('click', function(e) {
         city: city,
         state: state,
       },
-      weight: weight,
-      Age : age,
-      height: {feet: feet,
-      inches: inches}
+      weight: weightInt,
+      Age : ageInt,
+      height: {feet: feetInt,
+      inches: inchesInt}
     })
     alert("You have successfully registered!")
     window.location = "login.html"
