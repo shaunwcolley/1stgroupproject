@@ -87,10 +87,12 @@ function displayExercise(key) {
               </li>`)
     }
     workoutUL.innerHTML = exerciseLIItems.join('')
+    newExerciseKey = key
     let createNewExerciseBtn = `<button class=exerciseButton onclick="showNewExerciseForm()">Add New Exercise</button>`
     workoutUL.insertAdjacentHTML('beforeend', createNewExerciseBtn)
   }else{
     workoutUL.innerHTML = ``
+    newExerciseKey = key
     let createNewExerciseBtn = `<button class=exerciseButton onclick="showNewExerciseForm()">Add New Exercise</button>`
     workoutUL.insertAdjacentHTML('beforeend', createNewExerciseBtn)
     exerciseInstanceHistory.innerHTML = ``
