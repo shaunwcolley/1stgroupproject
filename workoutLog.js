@@ -60,7 +60,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 function populateDropdown(workoutArray, exerciseArray){
     let workoutDropBtns = workoutArray.map(function(workout){
-      return `<button onclick="displayExercise('${workout.key}'); showNewExerciseBtn('${workout.key}')" class="dropdown-item" type="button">${workout.value.name}</button>`
+      return `<button onclick="displayExercise('${workout.key}')" class="dropdown-item" type="button">${workout.value.name}</button>`
     })
       dropDownCustom.innerHTML = workoutDropBtns.join('')
 }
@@ -79,7 +79,7 @@ function displayExercise(key) {
     let exerciseLIItems = []
     for(let i = 0; i < exerciseKeys.length; i++) {
       exerciseLIItems.push(`<li>
-              <button onclick="displayStats('${exerciseKeys[i]}')" class="btnExercise">${exerciseNames[i].name}</button>
+              <button onclick="displayStats('${exerciseKeys[i]}', '${exerciseNames[i].name}')" class="btnExercise">${exerciseNames[i].name}</button>
               <div>
               <ul id="exerciseList">
               </ul>
@@ -91,14 +91,14 @@ function displayExercise(key) {
     workoutUL.insertAdjacentHTML('beforeend', createNewExerciseBtn)
   }else{
     workoutUL.innerHTML = ``
-    let createNewExerciseBtn = `<button onclick="showNewExerciseForm()">Add New Exercise/button>`
+    let createNewExerciseBtn = `<button onclick="showNewExerciseForm()">Add New Exercise</button>`
     workoutUL.insertAdjacentHTML('beforeend', createNewExerciseBtn)
+    exerciseInstanceHistory.innerHTML = ``
     console.log("No exercises have been created for this workout ...")
   }
 }
 
-
-function displayStats(key){
+function displayStats(key, name){
   let exerciseInstanceObjects = []
   for(let i = 0; i < exerciseInstances.length; i++){
     if(key == exerciseInstances[i].key){
@@ -125,7 +125,10 @@ function displayStats(key){
                           </div>
                           </li>`
     exerciseInstanceLIItems.push(exerciseRecord)
-    let recentExerciseLIItem = `<li>Most recent ${exerciseDetail.exerciseType} was on ${exerciseDate.toLocaleDateString()} at ${exerciseDate.toLocaleTimeString()}: weight lifted was ${exerciseDetail.weight} pounds for ${exerciseDetail.sets} sets, ${exerciseDetail.reps} reps each set, with a ${exerciseDetail.rest} minute rest period.</li>`
+    let currentUID = firebase.auth().currentUser.uid
+    let userRef = exercisesRef.child(currentUID)
+    let exerciseTypeRef = userRef.child("Exercise Types")
+    let recentExerciseLIItem = `<li>Most recent ${name} was on ${exerciseDate.toLocaleDateString()} at ${exerciseDate.toLocaleTimeString()}: weight lifted was ${exerciseDetail.weight} pounds for ${exerciseDetail.sets} sets, ${exerciseDetail.reps} reps each set, with a ${exerciseDetail.rest} minute rest period.</li>`
     exerciseInstanceLIItems.push(recentExerciseLIItem)
     exerciseInstanceHistory.innerHTML = exerciseInstanceLIItems.join("")
   }else{
@@ -177,14 +180,6 @@ function showNewWorkoutForm(){
       newWorkoutForm.hidden = false;
     } else if (newWorkoutForm.hidden == false){
         newWorkoutForm.hidden = true;}
-    }
-
-    function showNewExerciseBtn(key){
-    if (btnAddNewExercise.hidden == true) {
-      btnAddNewExercise.hidden = false;
-      newExerciseKey = key
-    } else if (btnAddNewExercise.hidden == false){
-      btnAddNewExercise.hidden = true;}
     }
 
     function showNewExerciseForm(){

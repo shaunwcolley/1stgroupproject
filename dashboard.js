@@ -47,4 +47,3 @@ function displayworkouts(bodyPart, level){
         }
 
     }
-
