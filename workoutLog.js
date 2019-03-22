@@ -37,10 +37,10 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     workoutTypeRef.on("child_added", function(snapshot){
       workouts.push({key: snapshot.key, value: snapshot.val()})
+      populateDropdown(workouts)
     })
     exerciseTypeRef.on("child_added", function(snapshot) {
       exercises.push({key: snapshot.key, value: snapshot.val()})
-      populateDropdown(workouts, exercises)
     })
     btnNewWorkoutSubmit.addEventListener('click',function(){
       let newWorkout = newWorkoutTextBox.value
@@ -58,7 +58,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 })
 
-function populateDropdown(workoutArray, exerciseArray){
+function populateDropdown(workoutArray){
     let workoutDropBtns = workoutArray.map(function(workout){
       return `<button onclick="displayExercise('${workout.key}')" class="dropdown-item myButton" type="button">${workout.value.name}</button>`
     })
