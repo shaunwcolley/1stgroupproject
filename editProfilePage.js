@@ -19,11 +19,11 @@ firebase.auth().onAuthStateChanged(function(user){
         let profilePageBody = `<div><p>First Name: ${firstName}</p>
         <p>Last Name: ${lastName}</p>
         <p>Age: ${age}</p>
-        <p>city:${city}</p>
+        <p>city: ${city}</p>
         <p>state: ${state}</p>
-        <p>weight:${weight}</p>
+        <p>weight: ${weight}</p>
         <p>Height Feet: ${heightFeet}</p>
-        <p>HeightInches :${heightInches}</p></div>`
+        <p>HeightInches: ${heightInches}</p></div>`
 
         a.innerHTML = profilePageBody
 
@@ -74,8 +74,9 @@ firebase.auth().onAuthStateChanged(function(user){
                                       </div>
                                       </form>`
         a.innerHTML = profilePageBodyChange
-        let backBtn = `<button onclick="goBack('${a}', '${profilePageBody}')" class="btn btn-primary">Back</button>`
+        let backBtn = `<button onclick="goBack()" class="btn btn-primary">Back</button>`
         a.insertAdjacentHTML('beforeend', backBtn)
+
         updateBtn.addEventListener('click', function(){
           let firstNameTextBox = document.getElementById("firstNameTextBox").value
           let lastNameTextBox = document.getElementById("lastNameTextBox").value
@@ -106,12 +107,15 @@ firebase.auth().onAuthStateChanged(function(user){
           a.innerHTML = profilePageBody
         })
         })
-      function goBack(innerLocation, inner){
-        innerLocation.innerHTML = inner
-      }
+
     }
     })
   }else {
-  alert("Please Login.")
-window.location = "login.html"}
+    alert("Please Login.")
+    window.location = "login.html"
+  }
 })
+function goBack(){
+  console.log('click')
+  location.reload()
+}
