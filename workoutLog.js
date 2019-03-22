@@ -113,7 +113,7 @@ function displayStats(key, name){
     let exerciseDetail = exerciseInstanceDetails[exerciseInstanceDetails.length-1]
     let exerciseDate = new Date(exerciseDetail.date)
     let exerciseRecord = `<li>
-                          <div>Weight: <input style="width: 45px" id="weightInput" type="number" value="${exerciseDetail.weight}"/> lbs.
+                          <div>Weight: <input style="width: 60px" id="weightInput" type="number" value="${exerciseDetail.weight}"/> lbs.
                           </div>
                           <div>Sets: <input style="width: 40px" id="setsInput" type="number" value="${exerciseDetail.sets}"/>
                           </div>
@@ -131,9 +131,7 @@ function displayStats(key, name){
   }else{
     console.log("Bench does not have any previous exercises logged ...")
     let exerciseRecord = `<li>
-                          <div>
-                          <label class="col-2 col-form-label">Weight: </label>
-                          <input style="width: 45px" id="weightInput" class="form-control" type="number" step="2.5" value="100"/> lbs.
+                          <div>Weight: <input style="width: 60px" id="weightInput" type="number" step="2.5" value="100"/> lbs.
                           </div>
                           <div>Sets: <input style="width: 40px" id="setsInput" type="number" value="3"/>
                           </div>
@@ -141,7 +139,7 @@ function displayStats(key, name){
                           </div>
                           <div>Rest Period between set: <input style="width: 40px" id="restInput" type="number" value="2"/> minutes.
                           </div>
-                          <div><button onclick="logExercise('${key}')" >Log Exercise</button>
+                          <div><button class="myButton" onclick="logExercise('${key}')" >Log Exercise</button>
                           </div>
                           </li>`
     exerciseInstanceHistory.innerHTML = exerciseRecord

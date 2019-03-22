@@ -4,9 +4,11 @@ ul {
 
 body {
   background-color: #cccccc;
-
 }
 
+#container{
+  margin: 20px;
+}
 /* 
 
 
@@ -27,8 +29,8 @@ body {
 .example_a {
   color: #fff !important;
   text-transform: uppercase;
-  background: blue;
-  padding: 20px;
+  background: #007bff;
+  padding: 10px;
   border-radius: 5px;
   display: inline-block;
   border: none;
@@ -86,7 +88,7 @@ body {
 
 
 
-
+/* 
 
 .exerciseButton {
 	-moz-box-shadow:inset 0px 34px 0px -15px #29bbff;
@@ -124,7 +126,47 @@ body {
 .exerciseButton:active {
 	position:relative;
 	top:1px;
+} */
+
+.exerciseButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #5c7799;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #5c7799;
+	box-shadow:inset 0px 1px 0px 0px #5c7799;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #acafb3), color-stop(1, #010305));
+	background:-moz-linear-gradient(top, #acafb3 5%, #010305 100%);
+	background:-webkit-linear-gradient(top, #acafb3 5%, #010305 100%);
+	background:-o-linear-gradient(top, #acafb3 5%, #010305 100%);
+	background:-ms-linear-gradient(top, #acafb3 5%, #010305 100%);
+	background:linear-gradient(to bottom, #acafb3 5%, #010305 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#acafb3', endColorstr='#010305',GradientType=0);
+	background-color:#acafb3;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d4d4d4;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #000000;
+}
+.exerciseButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #010305), color-stop(1, #acafb3));
+	background:-moz-linear-gradient(top, #010305 5%, #acafb3 100%);
+	background:-webkit-linear-gradient(top, #010305 5%, #acafb3 100%);
+	background:-o-linear-gradient(top, #010305 5%, #acafb3 100%);
+	background:-ms-linear-gradient(top, #010305 5%, #acafb3 100%);
+	background:linear-gradient(to bottom, #010305 5%, #acafb3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#010305', endColorstr='#acafb3',GradientType=0);
+	background-color:#010305;
+}
+.exerciseButton:active {
+	position:relative;
+	top:1px;
 }
 
-        
 
