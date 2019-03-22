@@ -4,7 +4,7 @@ let loginButton = document.getElementById("loginButton")
 
 firebase.auth().onAuthStateChanged(function(user){
   if(user) {
-    window.location = "dashboard.html"
+    window.location = "maindashboardpage.html"
   }else{
     loginButton.addEventListener('click',function(e){
       e.preventDefault()
