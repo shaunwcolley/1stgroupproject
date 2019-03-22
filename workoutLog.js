@@ -79,7 +79,7 @@ function displayExercise(key) {
     let exerciseLIItems = []
     for(let i = 0; i < exerciseKeys.length; i++) {
       exerciseLIItems.push(`<li>
-              <button onclick="displayStats('${exerciseKeys[i]}')" class="btnExercise">${exerciseNames[i].name}</button>
+              <button onclick="displayStats('${exerciseKeys[i]}', '${exerciseNames[i].name}')" class="btnExercise">${exerciseNames[i].name}</button>
               <div>
               <ul id="exerciseList">
               </ul>
@@ -98,8 +98,7 @@ function displayExercise(key) {
   }
 }
 
-
-function displayStats(key){
+function displayStats(key, name){
   let exerciseInstanceObjects = []
   for(let i = 0; i < exerciseInstances.length; i++){
     if(key == exerciseInstances[i].key){
@@ -126,7 +125,10 @@ function displayStats(key){
                           </div>
                           </li>`
     exerciseInstanceLIItems.push(exerciseRecord)
-    let recentExerciseLIItem = `<li>Most recent ${exerciseDetail.exerciseType} was on ${exerciseDate.toLocaleDateString()} at ${exerciseDate.toLocaleTimeString()}: weight lifted was ${exerciseDetail.weight} pounds for ${exerciseDetail.sets} sets, ${exerciseDetail.reps} reps each set, with a ${exerciseDetail.rest} minute rest period.</li>`
+    let currentUID = firebase.auth().currentUser.uid
+    let userRef = exercisesRef.child(currentUID)
+    let exerciseTypeRef = userRef.child("Exercise Types")
+    let recentExerciseLIItem = `<li>Most recent ${name} was on ${exerciseDate.toLocaleDateString()} at ${exerciseDate.toLocaleTimeString()}: weight lifted was ${exerciseDetail.weight} pounds for ${exerciseDetail.sets} sets, ${exerciseDetail.reps} reps each set, with a ${exerciseDetail.rest} minute rest period.</li>`
     exerciseInstanceLIItems.push(recentExerciseLIItem)
     exerciseInstanceHistory.innerHTML = exerciseInstanceLIItems.join("")
   }else{
