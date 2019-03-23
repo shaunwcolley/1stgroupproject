@@ -16,13 +16,44 @@
 
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <a class="navbar-brand" href="homepage.html">
+            <img src="background_Picture.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+            DCraft-Workout
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="maindashboardpage.html">Dashboard</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="dashboard.html">Tutorials</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="workoutLog.html">Workout Log</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href='editProfilePage.html'>Profile</a>
+              </li>
+            <!-- <li class="nav-item active">
+                <a class="nav-link" href='#'>Stats</a>
+            </li> -->
+          </ul>
+            <span class="navbar-text ml-auto">
+              <a id="signOutBtn"class="nav-link" href="">Sign Out</a>
+            </span>
+        </div>
+    </nav>
   <div id="container">
     <div id="pageHeader">
-      <H1>Digital Crafts WorkOut Log Page</H1>
+      <H1 hidden>Digital Crafts WorkOut Log Page</H1>
 
     </div>
     <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn btn-secondary dropdown-toggle example_a" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Your Workouts
     </button>
     <div id="dropDownCustom" class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -32,13 +63,13 @@
   <ul id="workoutUL"></ul>
   <ul id="exerciseInstanceHistory"></ul>
 
-  
+
   <div id="newExerciseForm" hidden>
       <form>
           <div class="form-row align-items-center">
             <div class="col-auto">
               <label class="sr-only" for="inlineFormInput">Name</label>
-              <input type="text" class="form-control mb-1" id="newExerciseTextBox" placeholder="Enter New Exercise Name">
+              <input type="text" class="form-control mb-1" id="newExerciseTextBox" placeholder="New Exercise Name">
             </div>
             <div class="col-auto">
               <button onclick="showNewExerciseForm()" type="submit" id="btnNewExerciseSubmit" class="btn btn-primary mb-2">Submit</button>
@@ -47,13 +78,13 @@
         </form>
   </div>
 
-  <button onclick="showNewWorkoutForm()">Create New Routine</button>
-  <div id="newWorkoutForm" hidden>
+  <div onclick="showNewWorkoutForm()" class="button_cont" ><a class="example_a" target="_blank" rel="nofollow noopener">Create New Routine</a></div>
+  <div class="newWorkForm" id="newWorkoutForm" hidden>
   <form>
       <div class="form-row align-items-center">
         <div class="col-auto">
           <label class="sr-only" for="inlineFormInput">Name</label>
-          <input type="text" class="form-control mb-1" id="newWorkoutTextBox" placeholder="Enter New Workout Name Here">
+          <input type="text" class="form-control mb-1" id="newWorkoutTextBox" placeholder="Enter Workout Name">
         </div>
         <div class="col-auto">
           <button onclick="showNewWorkoutForm()" type="submit" id="btnNewWorkoutSubmit" class="btn btn-primary mb-2">Submit</button>
@@ -84,5 +115,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <script src="workoutLog.js"></script>
+  <script src="signoutbtn.js"></script>
   </body>
 </html>

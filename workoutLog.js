@@ -37,10 +37,10 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     workoutTypeRef.on("child_added", function(snapshot){
       workouts.push({key: snapshot.key, value: snapshot.val()})
+      populateDropdown(workouts)
     })
     exerciseTypeRef.on("child_added", function(snapshot) {
       exercises.push({key: snapshot.key, value: snapshot.val()})
-      populateDropdown(workouts, exercises)
     })
     btnNewWorkoutSubmit.addEventListener('click',function(){
       let newWorkout = newWorkoutTextBox.value
@@ -58,9 +58,9 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 })
 
-function populateDropdown(workoutArray, exerciseArray){
+function populateDropdown(workoutArray){
     let workoutDropBtns = workoutArray.map(function(workout){
-      return `<button onclick="displayExercise('${workout.key}')" class="dropdown-item" type="button">${workout.value.name}</button>`
+      return `<button onclick="displayExercise('${workout.key}')" class="dropdown-item myButton" type="button">${workout.value.name}</button>`
     })
       dropDownCustom.innerHTML = workoutDropBtns.join('')
 }
@@ -79,7 +79,7 @@ function displayExercise(key) {
     let exerciseLIItems = []
     for(let i = 0; i < exerciseKeys.length; i++) {
       exerciseLIItems.push(`<li>
-              <button onclick="displayStats('${exerciseKeys[i]}', '${exerciseNames[i].name}')" class="btnExercise">${exerciseNames[i].name}</button>
+              <button onclick="displayStats('${exerciseKeys[i]}', '${exerciseNames[i].name}')" class="myButton">${exerciseNames[i].name}</button>
               <div>
               <ul id="exerciseList">
               </ul>
@@ -87,11 +87,13 @@ function displayExercise(key) {
               </li>`)
     }
     workoutUL.innerHTML = exerciseLIItems.join('')
-    let createNewExerciseBtn = `<button onclick="showNewExerciseForm()">Add New Exercise</button>`
+    newExerciseKey = key
+    let createNewExerciseBtn = `<button class=exerciseButton onclick="showNewExerciseForm()">Add New Exercise</button>`
     workoutUL.insertAdjacentHTML('beforeend', createNewExerciseBtn)
   }else{
     workoutUL.innerHTML = ``
-    let createNewExerciseBtn = `<button onclick="showNewExerciseForm()">Add New Exercise</button>`
+    newExerciseKey = key
+    let createNewExerciseBtn = `<button class=exerciseButton onclick="showNewExerciseForm()">Add New Exercise</button>`
     workoutUL.insertAdjacentHTML('beforeend', createNewExerciseBtn)
     exerciseInstanceHistory.innerHTML = ``
     console.log("No exercises have been created for this workout ...")
@@ -111,40 +113,33 @@ function displayStats(key, name){
     let exerciseDetail = exerciseInstanceDetails[exerciseInstanceDetails.length-1]
     let exerciseDate = new Date(exerciseDetail.date)
     let exerciseRecord = `<li>
-                          <div>
-                          <label class="col-2 col-form-label">Weight: </label>
-                          <input id="weightInput" class="form-control" type="number" step="2.5" value="${exerciseDetail.weight}"/> lbs.
+                          <div>Weight: <input style="width: 60px" id="weightInput" type="number" value="${exerciseDetail.weight}"/> lbs.
                           </div>
-                          <div>Sets: <input id="setsInput" type="number" value="${exerciseDetail.sets}"/>
+                          <div>Sets: <input style="width: 40px" id="setsInput" type="number" value="${exerciseDetail.sets}"/>
                           </div>
-                          <div>Reps: <input id="repsInput" type="number" value="${exerciseDetail.reps}"/>
+                          <div>Reps: <input style="width: 40px" id="repsInput" type="number" value="${exerciseDetail.reps}"/>
                           </div>
-                          <div>Rest Period between set: <input id="restInput" type="number" value="${exerciseDetail.rest}"/> minutes.
+                          <div>Rest Period between set: <input style="width: 40px" id="restInput" type="number" value="${exerciseDetail.rest}"/> minutes.
                           </div>
-                          <div><button onclick="logExercise('${key}')" >Log Exercise</button>
+                          <div><button class="myButton" onclick="logExercise('${key}')" >Log Exercise</button>
                           </div>
                           </li>`
     exerciseInstanceLIItems.push(exerciseRecord)
-    let currentUID = firebase.auth().currentUser.uid
-    let userRef = exercisesRef.child(currentUID)
-    let exerciseTypeRef = userRef.child("Exercise Types")
     let recentExerciseLIItem = `<li>Most recent ${name} was on ${exerciseDate.toLocaleDateString()} at ${exerciseDate.toLocaleTimeString()}: weight lifted was ${exerciseDetail.weight} pounds for ${exerciseDetail.sets} sets, ${exerciseDetail.reps} reps each set, with a ${exerciseDetail.rest} minute rest period.</li>`
     exerciseInstanceLIItems.push(recentExerciseLIItem)
     exerciseInstanceHistory.innerHTML = exerciseInstanceLIItems.join("")
   }else{
     console.log("Bench does not have any previous exercises logged ...")
     let exerciseRecord = `<li>
-                          <div>
-                          <label class="col-2 col-form-label">Weight: </label>
-                          <input id="weightInput" class="form-control" type="number" step="2.5" value="100"/> lbs.
+                          <div>Weight: <input style="width: 60px" id="weightInput" type="number" step="2.5" value="100"/> lbs.
                           </div>
-                          <div>Sets: <input id="setsInput" type="number" value="3"/>
+                          <div>Sets: <input style="width: 40px" id="setsInput" type="number" value="3"/>
                           </div>
-                          <div>Reps: <input id="repsInput" type="number" value="10"/>
+                          <div>Reps: <input style="width: 40px" id="repsInput" type="number" value="10"/>
                           </div>
-                          <div>Rest Period between set: <input id="restInput" type="number" value="2"/> minutes.
+                          <div>Rest Period between set: <input style="width: 40px" id="restInput" type="number" value="2"/> minutes.
                           </div>
-                          <div><button onclick="logExercise('${key}')" >Log Exercise</button>
+                          <div><button class="myButton" onclick="logExercise('${key}')" >Log Exercise</button>
                           </div>
                           </li>`
     exerciseInstanceHistory.innerHTML = exerciseRecord

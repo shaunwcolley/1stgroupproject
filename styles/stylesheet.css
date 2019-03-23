@@ -2,6 +2,9 @@
 H1 {
     text-align: center;
 }
+#signOutBtn {
+  padding: 0;
+}
 
 #pageHeader {
   display: flex;
@@ -9,6 +12,9 @@ H1 {
   margin-bottom: 3%;
 }
 
+.navbar {
+  width: 100%;
+}
 
 .CardPics{
     display:flex;
