@@ -62,6 +62,7 @@ H1 {
     margin: auto;
     border-radius: 11em;
     width: 20em;
+    display:none;
 }
 
 #youtubeFrame {

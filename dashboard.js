@@ -1,16 +1,14 @@
 let displayWorkoutLItems = document.getElementById("displayWorkoutLItems")
 
 function displayworkouts(bodyPart, level){
-    console.log(workouts)
-    console.log(level, bodyPart)
     let workout = workouts[level][bodyPart]
-    console.log(workout)
     let description = workout['description']
     let weight = workout['weight']
     let reps = workout['reps']
     let sets = workout['sets']
     let rest = workout['rest']
     document.getElementById('exercisePics').style.display = "none"
+    displayWorkoutLItems.style.display = "block"
     displayWorkoutLItems.innerHTML=  `<div id='workoutListing'>
                                     <li>Exercise: ${workout['description']}</li>
                                     <li>Weight: ${workout['weight']}</li>
@@ -27,6 +25,7 @@ function displayworkouts(bodyPart, level){
             let youtube = document.getElementById("youtubeFrame")
             youtube.innerHTML += '<iframe width="560" height="315" src="https://www.youtube.com/embed/x5t9PZ5CsxY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         }
+
         else if (bodyPart == 'arm') {
             document.getElementById('exercisePics').style.display = "none"
             document.getElementById('displayWorkoutLItems').style.display = "none"
