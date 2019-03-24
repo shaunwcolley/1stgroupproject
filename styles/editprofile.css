@@ -1,0 +1,17 @@
+body{
+  margin-left:2%;
+  margin-right:2%;
+  font-size: 15px;
+  background-color:#cccccc;
+}
+
+h2{
+  text-align: center;
+
+}
+p{
+  text-align: left;
+  margin-left:1%;
+  font-weight: bold;
+
+}

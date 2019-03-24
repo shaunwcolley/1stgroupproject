@@ -4,6 +4,10 @@
   }
 }
 
+#signoutBtn {
+  padding: 0px;
+}
+
 #bodyColor{
   background-color:#cccccc;
 }

@@ -1,16 +1,18 @@
-//Get unordered list to display exercies from workout
+
 let workoutUL = document.getElementById("workoutUL")
 //Custom workout dropdown buttons
 let btnWorkout1 = document.getElementById("btnWorkout1")
 
 let dropDownCustom = document.getElementById("dropDownCustom")
-//Test arrays
 let newWorkoutForm = document.getElementById("newWorkoutForm")
 let newWorkoutTextBox = document.getElementById("newWorkoutTextBox")
 let btnNewWorkoutSubmit = document.getElementById("btnNewWorkoutSubmit")
 let btnAddNewExercise = document.getElementById("btnAddNewExercise")
 let newExerciseForm = document.getElementById("newExerciseForm")
 let newExerciseTextBox = document.getElementById("newExerciseTextBox")
+
+let currentWorkoutNameHeading = document.getElementById("currentWorkoutNameHeading")
+let currentExerciseNameHeading = document.getElementById("currentExerciseNameHeading")
 
 //Hook up Firebase
 
@@ -60,10 +62,15 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 function populateDropdown(workoutArray){
     let workoutDropBtns = workoutArray.map(function(workout){
-      return `<button onclick="displayExercise('${workout.key}')" class="dropdown-item myButton" type="button">${workout.value.name}</button>`
+      return `<button onclick="displayExercise('${workout.key}'), displayWorkoutName('${workout.value.name}')" class="dropdown-item myButton" type="button">${workout.value.name}</button>`
     })
       dropDownCustom.innerHTML = workoutDropBtns.join('')
 }
+function displayWorkoutName(name){
+  currentWorkoutNameHeading.innerHTML = `<h5><u>${name}</u>&nbsp;-</h5>`
+  currentExerciseNameHeading.innerHTML = ``
+}
+
 function displayExercise(key) {
   let workoutNames = []
   for(let i = 0; i < exercises.length; i++){
@@ -79,7 +86,7 @@ function displayExercise(key) {
     let exerciseLIItems = []
     for(let i = 0; i < exerciseKeys.length; i++) {
       exerciseLIItems.push(`<li>
-              <button onclick="displayStats('${exerciseKeys[i]}', '${exerciseNames[i].name}')" class="myButton">${exerciseNames[i].name}</button>
+              <button onclick="displayStats('${exerciseKeys[i]}', '${exerciseNames[i].name}'), displayExerciseName('${exerciseNames[i].name}')" class="myButton">${exerciseNames[i].name}</button>
               <div>
               <ul id="exerciseList">
               </ul>
@@ -99,7 +106,9 @@ function displayExercise(key) {
     console.log("No exercises have been created for this workout ...")
   }
 }
-
+function displayExerciseName(name){
+  currentExerciseNameHeading.innerHTML = `<h5>&nbsp; ${name}:</h5>`
+}
 function displayStats(key, name){
   let exerciseInstanceObjects = []
   for(let i = 0; i < exerciseInstances.length; i++){
