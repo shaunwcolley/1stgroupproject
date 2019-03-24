@@ -16,6 +16,17 @@ body {
 
 #dropDownCustom {
   padding: 0px;
+  border: none;
+  background-color: #cccccc;
+}
+#workoutPageHeading{
+  display: flex;
+  flex-direction: row;
+  color: #062648;
+  margin-left: 25px;
+}
+#workoutUL {
+  margin-top: 3px;
 }
 
 .example_a:hover {
