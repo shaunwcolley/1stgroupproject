@@ -23,7 +23,7 @@ H1 {
 }
 
 .card.bg-dark.text-white{
-    width: 30em;
+    width: 23em;
     margin-bottom: 2em;
     height: 184px;
     align-content: center;
@@ -45,7 +45,7 @@ H1 {
 .levelbuttondiv {
     position: absolute;
     right: 0;
-    width: 25%;
+    width: 29%;
     top: 5%;
 
 
@@ -71,6 +71,19 @@ H1 {
     display:none;
 }
 
+
 #youtubeFrame {
-    text-align: center;
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    display:none; 
+}
+
+#youtubeFrame iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }

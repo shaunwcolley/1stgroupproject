@@ -22,6 +22,7 @@ function displayworkouts(bodyPart, level){
         if (bodyPart == 'chest') {
             document.getElementById('exercisePics').style.display = "none"
             document.getElementById('displayWorkoutLItems').style.display = "none"
+            document.getElementById("youtubeFrame").style.display = "block"
             let youtube = document.getElementById("youtubeFrame")
             youtube.innerHTML += '<iframe width="560" height="315" src="https://www.youtube.com/embed/x5t9PZ5CsxY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         }
@@ -29,18 +30,21 @@ function displayworkouts(bodyPart, level){
         else if (bodyPart == 'arm') {
             document.getElementById('exercisePics').style.display = "none"
             document.getElementById('displayWorkoutLItems').style.display = "none"
+            document.getElementById("youtubeFrame").style.display = "block"
             let youtube = document.getElementById("youtubeFrame")
             youtube.innerHTML += '<iframe width="560" height="315" src="https://www.youtube.com/embed/IUKYRC7GcEo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         }
         else if (bodyPart == 'leg'){
             document.getElementById('exercisePics').style.display = "none"
             document.getElementById('displayWorkoutLItems').style.display = "none"
+            document.getElementById("youtubeFrame").style.display = "block"
             let youtube = document.getElementById("youtubeFrame")
             youtube.innerHTML += '<iframe width="560" height="315" src="https://www.youtube.com/embed/F0YzTCxPJZg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         }
         else if (bodyPart == 'fullbody'){
             document.getElementById('exercisePics').style.display = "none"
             document.getElementById('displayWorkoutLItems').style.display = "none"
+            document.getElementById("youtubeFrame").style.display = "block"
             let youtube = document.getElementById("youtubeFrame")
             youtube.innerHTML += '<iframe width="560" height="315" src="https://www.youtube.com/embed/L9Cc7iDuScM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         }
