@@ -2,6 +2,10 @@ ul {
   list-style: none;
 }
 
+#signoutBtn {
+  padding: 0px;
+}
+
 body {
   background-color: #cccccc;
 }
@@ -9,10 +13,7 @@ body {
 #container{
   margin: 20px;
 }
-/* 
 
-
-*/
 #dropDownCustom {
   padding: 0px;
 }
@@ -83,12 +84,12 @@ body {
 	top:1px;
 }
 
-        
 
 
 
 
-/* 
+
+/*
 
 .exerciseButton {
 	-moz-box-shadow:inset 0px 34px 0px -15px #29bbff;
@@ -168,5 +169,3 @@ body {
 	position:relative;
 	top:1px;
 }
-
-
