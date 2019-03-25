@@ -1,8 +1,11 @@
 body{
-  margin-left:2%;
-  margin-right:2%;
   font-size: 15px;
   background-color:#cccccc;
+}
+
+#registerBody {
+  margin-left:2%;
+  margin-right:2%;
 }
 
 h2{
