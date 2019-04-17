@@ -20,6 +20,7 @@ password: Password1
 <br>
 
 <p float="left">
+  <p width="50%>
   Users can register and login to their accounts.
   <img src="gifs/dc-workout-login.gif" width="450" height="325"/>  
 </p>
@@ -32,9 +33,9 @@ password: Password1
 <p float="left">
 Users are able to create a custom workout routine (e.g., Leg Day, Arm Day, Easy Day etc.), add exercises to that workout (e.g., squats, bench press) and then record weight-lifting information. After an exercise has been recorded, the most recent exercise is displayed next time one is recorded. 
   
-<img src="gifs/dc-workout-record-exercise.gif" width="450" height="325"/>
+<img src="gifs/dc-workout-record-exercise.gif" width="400" height="300"/>
 
-<img src="gifs/dc-workout-create-routine.gif" width="450" height="325"/>
+<img src="gifs/dc-workout-create-routine.gif" width="400" height="300"/>
 
 <p float="left">
 Users are able to update information that is saved into their profile.
