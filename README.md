@@ -11,7 +11,7 @@ password: Password1
 
 <br>
 
-<p align="justfiy" float="left">App is mobile responsive for easy use at the gym.<img src="gifs/dc-workout-mobil.gif" width="300" height="300"/></p>
+<p text-align="justfiy" float="left">App is mobile responsive for easy use at the gym.<img src="gifs/dc-workout-mobil.gif" width="300" height="300"/></p>
 
 
 
