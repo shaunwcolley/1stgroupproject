@@ -12,6 +12,8 @@ password: Password1
 
 <table>
   <tr>
+  </tr>
+  <tr>
     <td>
       App is mobile responsive for easy use at the gym.
     </td>
