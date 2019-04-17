@@ -11,9 +11,9 @@ password: Password1
 
 <br>
 
-<p text-align="center" float="left">App is mobile responsive for easy use at the gym.<br><img src="gifs/dc-workout-mobil.gif" width="300" height="300"/></p>
+<p text-align="center" float="left">App is mobile responsive for easy use at the gym.  &nbsp;  <img src="gifs/dc-workout-mobil.gif" width="300" height="300"/></p>
 
-
+<br>
 
 <p align="right">
   Users can register and login to their accounts.
