@@ -10,10 +10,11 @@ email: hello@gmail.com
 password: Password1
 
 <br>
-
+<div>
 <img src="gifs/dc-workout-mobil.gif" width="300" height="300" align="right"/>
 
 App is mobile responsive for easy use at the gym.
+</div>
 
 Users can register and login to their accounts.
 
