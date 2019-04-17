@@ -9,9 +9,7 @@ Feel free to register a new account or test out the app using the following cred
 email: hello@gmail.com
 password: Password1
 
-App is mobile responsive for easy use at the gym.
-
-<img src="gifs/dc-workout-mobil.gif" width="250" height="250"/>
+<span>App is mobile responsive for easy use at the gym.</span><span><img src="gifs/dc-workout-mobil.gif" width="250" height="250"/></span>
 
 
 Users can register and login to their accounts.
