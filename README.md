@@ -12,13 +12,9 @@ password: Password1
 
 <table>
   <tr>
-  </tr>
-  <tr>
     <td>
       App is mobile responsive for easy use at the gym.
     </td>
-  </tr>
-  <tr>
     <td>
       <img src="gifs/dc-workout-mobil.gif" width="250" height="250"/>
     </td>
