@@ -10,12 +10,12 @@ email: hello@gmail.com
 password: Password1
 
 
-<table style="border:none">
+<table style="border:collapse">
   <tr>
-    <td style="border:none">
+    <td>
       App is mobile responsive for easy use at the gym.
     </td>
-    <td style="border:none">
+    <td>
       <img src="gifs/dc-workout-mobil.gif" width="300" height="300"/>
     </td>
   </tr>
