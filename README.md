@@ -11,7 +11,7 @@ password: Password1
 
 App is mobile responsive for easy use at the gym.
 
-![](gifs/dc-workout-mobile.gif)
+![](gifs/dc-workout-mobil.gif)
 
 
 Users can register and login to their accounts.
