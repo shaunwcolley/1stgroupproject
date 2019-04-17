@@ -11,16 +11,16 @@ password: Password1
 
 Users can register and login to their accounts.
 
-![](dc-workout-login.gif)
+![](gifs/dc-workout-login.gif)
 
 
 Users can browse recommended exercises and watch embedded tutorial videos.
 
-![](dc-workout-tutorial.gif)
+![](gifs/dc-workout-tutorial.gif)
 
-![](dc-workout-record-exercise.gif)
+![](gifs/dc-workout-record-exercise.gif)
 
-![](dc-workout-update-profile.gif)
+![](gifs/dc-workout-update-profile.gif)
 
 Collaborators:
 Eric DeVelder (https://github.com/emark1), Will Roberts(https://github.com/wcrober), Alpa Mehta(https://github.com/amehta27)
