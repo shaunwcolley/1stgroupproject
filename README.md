@@ -15,7 +15,9 @@ password: Password1
 
   App is mobile responsive for easy use at the gym.
 </p>
+
 ***
+
 <p>
   Users can register and login to their accounts.
   <p align="center">
