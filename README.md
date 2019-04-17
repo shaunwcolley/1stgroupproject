@@ -36,8 +36,8 @@ Users are able to update information that is saved into their profile.
 
 
 # Collaborators:
-* [Eric DeVelder](https://github.com/emark1)
-* [Will Roberts](https://github.com/wcrober)
-* [Alpa Mehta](https://github.com/amehta27)
-* [Shaun Colley](https://github.com/shaunwcolley)
+... [Eric DeVelder](https://github.com/emark1)
+... [Will Roberts](https://github.com/wcrober)
+... [Alpa Mehta](https://github.com/amehta27)
+... [Shaun Colley](https://github.com/shaunwcolley)
 
