@@ -17,6 +17,8 @@ password: Password1
 
 <p align="left">App is mobile responsive for easy use at the gym.</p>
 
+<br>
+
 <p align="right">
   Users can register and login to their accounts.
 </p>
