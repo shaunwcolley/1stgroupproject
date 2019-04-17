@@ -13,25 +13,25 @@ password: Password1
 
 App is mobile responsive for easy use at the gym.
 
-<img src="gifs/dc-workout-mobil.gif"/>
+<img src="gifs/dc-workout-mobil.gif" width="300" height="300"/>
 
 Users can register and login to their accounts.
 
-<img src="gifs/dc-workout-login.gif"/.>
+<img src="gifs/dc-workout-login.gif" width="" height=""/>
 
 Users can browse recommended exercises and watch embedded tutorial videos.
 
-<img src="gifs/dc-workout-tutorial.gif"/>
+<img src="gifs/dc-workout-tutorial.gif" width="" height=""/>
 
 Users are able to create a custom workout routine (e.g., Leg Day, Arm Day, Easy Day etc.), add exercises to that workout (e.g., squats, bench press) and then record weight-lifting information. After an exercise has been recorded, the most recent exercise is displayed next time one is recorded.
 
-<img src="gifs/dc-workout-record-exercise.gif"/>
+<img src="gifs/dc-workout-record-exercise.gif" width="" height=""/>
 
-<img src="gifs/dc-workout-create-routine.gif"/>
+<img src="gifs/dc-workout-create-routine.gif" width="" height=""/>
 
 Users are able to update information that is saved into their profile.
 
-<img src="gifs/dc-workout-update-profile.gif"/>
+<img src="gifs/dc-workout-update-profile.gif" width="" height=""/>
 
 
 # Collaborators:
