@@ -17,8 +17,6 @@ password: Password1
 
 <p align="left">App is mobile responsive for easy use at the gym.</p>
 
-***
-
 <p align="right">
   Users can register and login to their accounts.
 </p>
@@ -26,8 +24,6 @@ password: Password1
   <img src="gifs/dc-workout-login.gif" width="" height=""/>  
 </p>
 
-
-***
 
 Users can browse recommended exercises and watch embedded tutorial videos.
 
