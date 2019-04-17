@@ -30,9 +30,7 @@ Users can browse recommended exercises and watch embedded tutorial videos.
 
 <img src="gifs/dc-workout-tutorial.gif" width="" height=""/>
 
-Users are able to create a custom workout routine (e.g., Leg Day, Arm Day, Easy Day etc.), add exercises to that workout (e.g., squats, bench press) and then record weight-lifting information. After an exercise has been recorded, the most recent exercise is displayed next time one is recorded.
-
-<img src="gifs/dc-workout-record-exercise.gif" width="" height=""/>
+Users are able to create a custom workout routine (e.g., Leg Day, Arm Day, Easy Day etc.), add exercises to that workout (e.g., squats, bench press) and then record weight-lifting information. After an exercise has been recorded, the most recent exercise is displayed next time one is recorded. ![]("gifs/dc-workout-record-exercise.gif")
 
 <img src="gifs/dc-workout-create-routine.gif" width="" height=""/>
 
