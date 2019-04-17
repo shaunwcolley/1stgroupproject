@@ -34,5 +34,12 @@ Users are able to update information that is saved into their profile.
 
 ![](gifs/dc-workout-update-profile.gif)
 
+
+* [Team Members](#team-members)
+# <a name="team-members"></a>Team Members
+* "Eric DeVelder" <https://github.com/emark1>
+* "Will Roberts" <https://github.com/wcrober>
+* "Alpa Mehta" <https://github.com/amehta27>
+* "Shaun Colley" <https://github.com/shaunwcolley>
 Collaborators:
 Eric DeVelder (https://github.com/emark1), Will Roberts(https://github.com/wcrober), Alpa Mehta(https://github.com/amehta27)
