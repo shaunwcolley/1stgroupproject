@@ -10,7 +10,7 @@ email: hello@gmail.com
 password: Password1
 
 
-<table style="border-style:none">
+<table style="border:none">
   <tr>
     <td>
       App is mobile responsive for easy use at the gym.
