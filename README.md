@@ -26,7 +26,7 @@ password: Password1
       Users can register and login to their accounts.
     </td>
     <td>
-      ![](gifs/dc-workout-login.gif)
+      <img src="gifs/dc-workout-login.gif"/.>
     </td>
   </tr>
   <tr>
@@ -34,7 +34,7 @@ password: Password1
       Users can browse recommended exercises and watch embedded tutorial videos.
     </td>
     <td>
-      ![](gifs/dc-workout-tutorial.gif)
+      <img src="gifs/dc-workout-tutorial.gif"/>
     </td>
   </tr>
   <tr>
@@ -42,12 +42,12 @@ password: Password1
       Users are able to create a custom workout routine (e.g., Leg Day, Arm Day, Easy Day etc.), add exercises to that workout (e.g., squats, bench press) and then record weight-lifting information. After an exercise has been recorded, the most recent exercise is displayed next time one is recorded.
     </td>
     <td>
-      ![](gifs/dc-workout-record-exercise.gif)
+      <img src="gifs/dc-workout-record-exercise.gif"/>
     </td>
   </tr>
   <tr>
     <td>
-      ![](gifs/dc-workout-create-routine.gif)
+      <img src="gifs/dc-workout-create-routine.gif"/>
     </td>
     <td>
       <br>
@@ -58,7 +58,7 @@ password: Password1
       Users are able to update information that is saved into their profile.
     </td>
     <td>
-      ![](gifs/dc-workout-update-profile.gif)
+      <img src="gifs/dc-workout-update-profile.gif"/>
     </td>
   </tr>
 </table>
