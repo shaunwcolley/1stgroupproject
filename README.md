@@ -28,6 +28,7 @@ Users can register and login to their accounts.
 <br>
 
 Users can browse recommended exercises and watch embedded tutorial videos.
+
 <img src="gifs/dc-workout-tutorial.gif" width="100%" height="450"/>
 
 <br>
@@ -44,6 +45,7 @@ Users are able to create a custom workout routine (e.g., Leg Day, Arm Day, Easy 
 
 <br>
 Users are able to update personal information that is saved into their profile.
+
 <img src="gifs/dc-workout-update-profile.gif" width="100%" height="450"/>
 
 
