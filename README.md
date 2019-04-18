@@ -13,7 +13,7 @@ password: Password1
 
 ## Features
 
-App is mobile responsive for easy use at the gym.  &nbsp;  <img src="gifs/dc-workout-mobil.gif" width="325" height="350"/>
+App is mobile responsive for easy use at the gym.  &nbsp;  <img src="gifs/dc-workout-mobil.gif" width="350" height="375"/>
 
 <br>
 
