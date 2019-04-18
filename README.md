@@ -2,11 +2,13 @@
 
 DC Workout App allows user to register an account, create custom weight-lifting routines, create custom exercises, maintain a record of those exercises, and view tutorials recommended exercises.
 
-Live link: http://extra-large-step.surge.sh/homepage
+## Live link: 
+
+http://extra-large-step.surge.sh/homepage
 
 Feel free to register a new account or you can test out the app using the following credentials:
 
-email: hello@gmail.com
+email: hello@gmail.com <br>
 password: Password1
 
 <br>
